@@ -26,7 +26,7 @@
   </ion-list>
   <ion-list>
     <ion-list-header>
-      <ion-label color="primary">Últimos Pedidos</ion-label>
+      <app-loading-request *ngIf="isLoading"></app-loading-request>
       <app-request *ngFor="let request of requests" [request]="request"></app-request>
     </ion-list-header>
   </ion-list>

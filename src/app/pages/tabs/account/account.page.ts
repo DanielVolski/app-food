@@ -7,21 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountPage implements OnInit {
   isLoading: boolean = true; 
-  requests = 
-  [
-    {
-      'restaurant': 'Nome restaurante',
-      'address': 'Endereço',
-      'price': 60,
-      'status': 'Entregue',
-      'content': ['Pizza 2x', 'Hamburguer 2x'],
-      'date': '01/01/24',
-    }
-  ]
+  requests = []; 
+  
 
   constructor() {
-    setTimeout(() => {}, 1000);
-    this.isLoading = false;
+    setTimeout(() => {
+      this.requests = [
+          {
+            'restaurant': 'Nome restaurante',
+            'address': 'Endereço',
+            'price': 60,
+            'status': 'Entregue',
+            'content': ['Pizza 2x', 'Hamburguer 2x'],
+            'date': '01/01/24',
+          }
+      ]
+      this.isLoading = false;
+    }, 3000);
+    
   }
 
 
