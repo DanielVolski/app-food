@@ -27,43 +27,7 @@
   <ion-list>
     <ion-list-header>
       <ion-label color="primary">Últimos Pedidos</ion-label>
-      <ion-item-group>
-        <ion-item lines="none">
-          <ion-label>
-            <h4>Dom Henrique</h4>
-            <p>Guarapuava, PR</p>
-            <ion-text>
-              <p>R$: 60.00
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-              </p>
-            </ion-text>
-          </ion-label>
-          <ion-note slot="end" color="dark">
-            Entregue <ion-icon name="checkmark-circle-outline" color="success"></ion-icon>
-          </ion-note>
-        </ion-item>
-        <ion-item>
-          <ion-label>
-            <ion-text color="dark">
-              <p>Pizza x2</p>
-              <p>Burguer x2</p>
-            </ion-text>
-            <p style="margin-top: 2%;">Data muito foda</p>
-            <ion-row>
-              <ion-col col="6">
-                <ion-button fill="outline" expand="block">
-                  Pedir Reclamação
-                </ion-button>
-              </ion-col>
-              <ion-col col="6">
-                <ion-button fill="outline" expand="block" color="dark">
-                  Abrir Reclamação
-                </ion-button>
-              </ion-col>
-            </ion-row>
-          </ion-label>
-        </ion-item>
-      </ion-item-group>
+      <app-request *ngFor="let request of requests" [request]="request"></app-request>
     </ion-list-header>
   </ion-list>
 </ion-content>
