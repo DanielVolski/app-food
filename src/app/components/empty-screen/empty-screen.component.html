@@ -5,8 +5,10 @@
     </ion-col>
   </ion-row>
   <ion-row>
-    <ion-col>
-      <ion-icon [name]="model?.title ? model?.title : ''"></ion-icon>
+    <ion-col class="ion-text-center">
+      <ion-label>
+        {{ model?.title ? model.title: '' }}
+      </ion-label>
     </ion-col>
   </ion-row>
 </ion-grid>

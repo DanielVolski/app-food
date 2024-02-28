@@ -25,8 +25,9 @@
     </ion-item>
   </ion-list>
   <ion-list>
-    <ion-list-header>
+    <ion-list-header style="display: flex;">
       <app-loading-request *ngIf="isLoading"></app-loading-request>
+      <app-empty-screen *ngIf="requests?.length == 0 && !isLoading" [model]="model"></app-empty-screen>
       <app-request *ngFor="let request of requests" [request]="request"></app-request>
     </ion-list-header>
   </ion-list>
